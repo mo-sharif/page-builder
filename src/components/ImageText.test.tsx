@@ -3,7 +3,8 @@ import ImageText from './ImageText';
 
 describe('ImageText Component', () => {
   it('renders the image, text, and title (if provided)', () => {
-    const testImageURI = 'https://images.unsplash.com/photo-1579963333765-b4129b3250fc';
+    const testImageURI =
+      'https://images.unsplash.com/photo-1579963333765-b4129b3250fc';
     const testText = 'This is a description';
     const testTitle = 'Sample Title';
 
@@ -29,7 +30,8 @@ describe('ImageText Component', () => {
   });
 
   it('renders the text without a title when no title is provided', () => {
-    const testImageURI = 'https://images.unsplash.com/photo-1579963333765-b4129b3250fc';
+    const testImageURI =
+      'https://images.unsplash.com/photo-1579963333765-b4129b3250fc';
     const testText = 'This is a description';
 
     render(
@@ -50,15 +52,12 @@ describe('ImageText Component', () => {
   });
 
   it('renders the layout based on leftToRight prop', () => {
-    const testImageURI = 'https://images.unsplash.com/photo-1579963333765-b4129b3250fc';
+    const testImageURI =
+      'https://images.unsplash.com/photo-1579963333765-b4129b3250fc';
     const testText = 'This is a description';
 
     const { container, rerender } = render(
-      <ImageText
-        imageURI={testImageURI}
-        text={testText}
-        leftToRight={true}
-      />
+      <ImageText imageURI={testImageURI} text={testText} leftToRight={true} />
     );
 
     // Check for the left-to-right layout by inspecting the parent div of the image and text
@@ -67,11 +66,7 @@ describe('ImageText Component', () => {
 
     // Now test for the reverse layout
     rerender(
-      <ImageText
-        imageURI={testImageURI}
-        text={testText}
-        leftToRight={false}
-      />
+      <ImageText imageURI={testImageURI} text={testText} leftToRight={false} />
     );
     expect(parentDiv).toHaveClass('flex-row-reverse');
   });
