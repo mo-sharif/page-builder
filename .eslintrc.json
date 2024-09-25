@@ -5,6 +5,7 @@
   }
 }
 
+
 /*
  * We are disabling the @next/next/no-img-element rule because we are using
  * the <img> tag for now instead of the <Image> component from Next.js.
