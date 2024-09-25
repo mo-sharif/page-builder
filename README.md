@@ -9,6 +9,12 @@ This app is a JSON-driven landing page builder. Users can input JSON data on the
 3. Start the development server: `npm run dev` or `yarn dev`
 4. Open the app at `http://localhost:3000`
 
+### Formatting & Linting
+
+- Lint: `npm run lint` or `yarn lint`
+- Format: `npm run format` or `yarn format`
+- Fix Formatting: `npm run format:fix` or `yarn format:fix`
+
 ### Features
 
 - Input JSON in the left panel and preview the generated sections on the right.
