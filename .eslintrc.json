@@ -1,3 +1,16 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript"
+  ],
+  "rules": {
+    "@next/next/no-img-element": "off"
+  }
 }
+/*
+ * We are disabling the @next/next/no-img-element rule because we are using 
+ * the <img> tag for now instead of the <Image> component from Next.js.
+ * This is acceptable for the current phase of development where image optimization 
+ * is not a priority, and we want more control or simplicity over the image rendering. 
+ * In the future, we may consider migrating to the <Image> component for performance optimizations.
+ */

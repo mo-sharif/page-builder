@@ -33,5 +33,6 @@ This app is a JSON-driven landing page builder. Users can input JSON data on the
   - sections.ts       # Type definitions for different sections
 /utils
   - formatJson.ts     # Utility to format and prettify JSON input
+  - textConstants.ts  # Utility to hold our string text constants for the app
 /public               # Folder for static images and assets
 ```

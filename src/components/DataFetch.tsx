@@ -1,3 +1,4 @@
+import { TEXT_CONSTANTS } from '@/utils/textConstants';
 import React, { useState, useEffect, useCallback } from 'react';
 
 interface DataFetchProps {
@@ -14,7 +15,7 @@ const DataFetch: React.FC<DataFetchProps> = ({ url }) => {
             const result = await response.json();
             setData(result);
         } catch (err) {
-            setError(`Failed to fetch data ${err}`);
+            setError(`${TEXT_CONSTANTS.DATA_FETCH_ERROR} ${err}`);
         }
     }, [url]);
 
