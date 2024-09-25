@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import ImageText from './ImageText';
+import ImageText from '../components/ImageText';
 
 describe('ImageText Component', () => {
   it('renders the image, text, and title (if provided)', () => {
