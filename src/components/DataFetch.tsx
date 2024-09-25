@@ -35,8 +35,8 @@ const DataFetch: React.FC<DataFetchProps> = ({ url }) => {
           >
             Refresh
           </button>
-          <pre className='overflow-scroll rounded bg-gray-900 p-2 text-white'>
-            {JSON.stringify(data, null, 2).substring(0, 300)}...
+          <pre className='overflow-scroll rounded bg-gray-900 p-2 h-96 text-white'>
+            {JSON.stringify(data, null, 2)}
           </pre>
         </div>
       )}
