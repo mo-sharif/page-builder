@@ -16,7 +16,7 @@ describe('DataFetch Component', () => {
   });
 
   it('should display fetched data correctly', async () => {
-    render(<DataFetch url="https://cat-fact.herokuapp.com/facts" />);
+    render(<DataFetch url='https://cat-fact.herokuapp.com/facts' />);
 
     // Waiting for the data to be fetched and displayed
     await waitFor(() => {
@@ -30,18 +30,22 @@ describe('DataFetch Component', () => {
       Promise.reject(new Error('Fetch error'))
     );
 
-    render(<DataFetch url="https://cat-fact.herokuapp.com/facts" />);
+    render(<DataFetch url='https://cat-fact.herokuapp.com/facts' />);
 
     // Waiting for the error to be displayed using a more flexible matcher (regex or function)
     await waitFor(() => {
-      expect(screen.getByText((content, element) => 
-        content.includes(TEXT_CONSTANTS.DATA_FETCH_ERROR) && content.includes('Fetch error')
-      )).toBeInTheDocument();
+      expect(
+        screen.getByText(
+          (content, element) =>
+            content.includes(TEXT_CONSTANTS.DATA_FETCH_ERROR) &&
+            content.includes('Fetch error')
+        )
+      ).toBeInTheDocument();
     });
   });
 
   it('should allow the user to refresh the data', async () => {
-    render(<DataFetch url="https://cat-fact.herokuapp.com/facts" />);
+    render(<DataFetch url='https://cat-fact.herokuapp.com/facts' />);
 
     // Click the refresh button
     const refreshButton = screen.getByText('Refresh');
