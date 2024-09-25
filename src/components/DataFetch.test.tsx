@@ -36,7 +36,7 @@ describe('DataFetch Component', () => {
     await waitFor(() => {
       expect(
         screen.getByText(
-          (content, element) =>
+          (content) =>
             content.includes(TEXT_CONSTANTS.DATA_FETCH_ERROR) &&
             content.includes('Fetch error')
         )
