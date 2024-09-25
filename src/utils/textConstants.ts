@@ -2,7 +2,8 @@
 // This approach is useful if you want to configure these values dynamically or securely in different environments.
 
 export const TEXT_CONSTANTS = {
-  PLACEHOLDER: 'Enter valid JSON to generate a landing page...\n(⌘ + F or ⌃ + F to format the JSON)',
+  PLACEHOLDER:
+    'Enter valid JSON to generate a landing page...\n(⌘ + F or ⌃ + F to format the JSON)',
   DEFAULT_MESSAGE:
     'Start by entering a valid JSON on the left panel to generate the landing page!',
   UNKNOWN_SECTION: 'Unknown section type',
